@@ -43,19 +43,19 @@ export default function About() {
           <div className="about-content max-w-prose text-lg leading-relaxed text-neutral-300">
             <p className="mb-4">
               I’m a Front-End Engineer with a strong design sensibility who
-              builds scalable, accessible, and performant web apps. I ship
-              polished, component-based UIs in{" "}
+              builds scalable and performant web applications. I ship polished,
+              component-based UIs in{" "}
               <span className="text-cyan-300">React</span> and{" "}
               <span className="text-cyan-300">
                 Salesforce Lightning Web Components
               </span>
-              , turning Figma prototypes into production experiences.
+              , transforming Figma prototypes into production-ready experiences.
             </p>
             <p>
-              I care about responsive design, a11y, and performance, and I’m
-              actively growing full-stack capabilities with Node.js and{" "}
-              <span className="text-cyan-300">REST APIs</span> so I can
-              contribute across the stack.
+              I’m a technologically adept engineer eager to learn and grow
+              within an ever-evolving landscape of modern technologies,
+              continuously pushing my skills forward to contribute across the
+              stack.
             </p>
           </div>
         </div>
