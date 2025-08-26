@@ -12,7 +12,7 @@ function App() {
     <>
       <Hero handleLearnMore={handleLearnMore} />
 
-      <section className="body">
+      <section className="body bg-neutral-900">
         {/* <Header /> */}
         <About />
       </section>

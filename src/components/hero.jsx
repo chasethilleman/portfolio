@@ -28,7 +28,7 @@ export default function Hero(props) {
               : "opacity-0 -translate-x-full",
           ].join(" ")}
         >
-          I'm a frontend engineer.
+          I'm a front end engineer.
         </h2>
         <button
           onClick={props.handleLearnMore}
