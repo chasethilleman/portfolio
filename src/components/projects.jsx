@@ -74,7 +74,7 @@ function Project({ title, description, image, cta, reverse, imgWidth }) {
 export default function Projects() {
   return (
     <section className="projects relative mx-auto max-w-8xl px-6 py-20 text-white bg-neutral-900">
-      <h2 className="section-heading mb-30 text-center text-5xl font-extrabold">
+      <h2 className="section-heading mb-5 text-center text-5xl font-extrabold">
         <span className="section-heading-text">Projects</span>
         <div className="section-heading-line" />
       </h2>

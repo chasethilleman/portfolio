@@ -52,7 +52,7 @@ const iconItem = {
 export default function About() {
   return (
     <section className="about relative mx-auto max-w-6xl px-6 py-20 text-white bg-neutral-900">
-      <h2 className="section-heading mb-30 text-center text-5xl font-extrabold">
+      <h2 className="section-heading mb-20 text-center text-5xl font-extrabold">
         <span className="section-heading-text">About Me</span>
         <div className="section-heading-line" />
       </h2>
