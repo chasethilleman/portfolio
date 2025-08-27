@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Me from "../assets/me.jpg";
+import Me from "../assets/Me.jpg";
 import HTML from "../icons/html.svg";
 import CSS from "../icons/css.svg";
 import JavaScript from "../icons/javascript.svg";
