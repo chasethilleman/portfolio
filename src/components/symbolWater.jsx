@@ -16,6 +16,8 @@ export default function SymbolWater({
   shimmer = 0.08, // reduced shimmer to avoid glitter
   color = "#ffffff",
   opacity = 0.3,
+  fadeInMs = 800,
+  fadeInDelayMs = 0,
   bg = "oklch(20.5% 0 0)",
   fontSize = 12, // px number instead of string for measurement
   letterSpacing = 0.02, // em
@@ -50,6 +52,9 @@ export default function SymbolWater({
   const frameInterval = 1000 / fps;
   const lastTimeRef = useRef(0);
 
+  // Fade-in state
+  const [hasFadedIn, setHasFadedIn] = useState(false);
+
   // Weighted thresholds (light → dark) tuned to favor denser symbols overall
   // Order must be [":", "-", "+", "=", "*"] for mapping
   const thresholds = useMemo(() => [0.3, 0.52, 0.7, 0.86, 1.0], []);
@@ -74,24 +79,19 @@ export default function SymbolWater({
       const cols = dims.cols;
       const next = new Array(rows);
 
-      // Precompute some motion fields for this frame
-      // Slow domain-warped FBM for organic ripples
       const scale = 1.9; // spatial frequency
       const warp = 0.55; // domain warp intensity
       const flow = 0.12; // flow speed through noise field
 
       for (let r = 0; r < rows; r++) {
         let s = "";
-        // Subtle per-row drift (like long, lazy waves)
         const rowPhase = r * 0.37;
         const rowShift = Math.sin((t * speed + rowPhase) * waveFreq) * waveAmp;
 
         for (let c = 0; c < cols; c++) {
-          // Normalized coordinates in [0,1]
           const u = (c + rowShift) / Math.max(1, cols - 1);
           const v = r / Math.max(1, rows - 1);
 
-          // Domain-warped coordinates
           const p0x = u * scale;
           const p0y = v * scale;
 
@@ -100,36 +100,42 @@ export default function SymbolWater({
           const px = p0x + (wx - 0.5) * 2.0 * warp;
           const py = p0y + (wy - 0.5) * 2.0 * warp;
 
-          // FBM for soft water caustic-like texture
           let val = fbm(px + t * 0.08, py - t * 0.06, 4);
 
-          // Light "breathing" (not glitter):
           if (shimmer > 0) {
             const tw = 0.5 + 0.5 * Math.sin(t * 0.9 + c * 0.05 + r * 0.11);
             val = clamp01(val * (1 - shimmer) + tw * shimmer);
           }
 
-          // Contrast curve & bias towards heavier symbols
           val = Math.pow(val, 0.78);
 
-          // Ordered dithering to break banding
-          val += (bayer4[r & 3][c & 3] - 0.5) * 0.08; // small nudge
+          val += (bayer4[r & 3][c & 3] - 0.5) * 0.08;
           val = clamp01(val);
 
-          // Map to symbol via thresholds
           let symIndex = 0;
           while (symIndex < thresholds.length && val > thresholds[symIndex])
             symIndex++;
           const sym =
             orderedSymbols[Math.min(symIndex, orderedSymbols.length - 1)];
 
-          // Ensure we only use requested charset; fallback if someone changes props
           s += charset.includes(sym) ? sym : charset[charset.length - 1] || sym;
         }
         next[r] = s;
       }
 
       setLines(next);
+
+      if (!hasFadedIn) {
+        const prefersReduced = window.matchMedia?.(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        if (prefersReduced) {
+          setHasFadedIn(true);
+        } else {
+          setTimeout(() => setHasFadedIn(true), fadeInDelayMs);
+        }
+      }
+
       rafRef.current = requestAnimationFrame(tick);
     };
 
@@ -148,6 +154,8 @@ export default function SymbolWater({
     charset,
     thresholds,
     orderedSymbols,
+    hasFadedIn,
+    fadeInDelayMs,
   ]);
 
   return (
@@ -163,7 +171,13 @@ export default function SymbolWater({
         className="m-0 p-0 font-mono whitespace-pre leading-none"
         style={{
           color,
-          opacity,
+          opacity: hasFadedIn
+            ? typeof opacity === "number"
+              ? opacity
+              : 0.3
+            : 0,
+          transition: `opacity ${fadeInMs}ms ease`,
+          willChange: "opacity",
           fontSize: fontSize + "px",
           letterSpacing: letterSpacing + "em",
           lineHeight: lineHeight + "em",
