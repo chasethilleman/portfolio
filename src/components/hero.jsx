@@ -38,7 +38,26 @@ export default function Hero(props) {
         >
           <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-cyan-500 group-hover:translate-x-0 group-hover:translate-y-0"></span>
           <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
-          <span class="relative">Learn More</span>
+          <span class="relative flex items-center gap-2">
+            Learn More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              role="img"
+              aria-label="Down chevron"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="#FFFFFF"
+                stroke-width="4"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+              />
+            </svg>
+          </span>
         </a>
         {/* <button
           onClick={props.handleLearnMore}
