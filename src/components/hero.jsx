@@ -12,7 +12,7 @@ export default function Hero(props) {
   return (
     <>
       <SymbolWater />
-      <section className="hero flex flex-col justify-center items-center space-y-4">
+      <section className="hero flex flex-col justify-center items-center space-y-4 px-4">
         <h1
           className={[
             "hero-title text-7xl text-white transition-all duration-700 ease-out",

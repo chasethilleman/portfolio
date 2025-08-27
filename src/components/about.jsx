@@ -92,9 +92,9 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* RIGHT COLUMN — staggered icon reveals */}
+        {/* RIGHT COLUMN */}
         <motion.div
-          className="grid grid-cols-2 place-items-center justify-items-center justify-center items-center gap-6 sm:grid-cols-3 aspect-square max-w-[500px]"
+          className="grid [grid-template-columns:repeat(auto-fit,minmax(144px,1fr))] gap-6 w-full max-w-[500px]"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
@@ -104,7 +104,7 @@ export default function About() {
             <motion.div
               key={name}
               variants={iconItem}
-              className="relative flex h-36 w-36 flex-col items-center justify-center p-[2px]"
+              className="relative w-full aspect-square flex flex-col items-center justify-center p-[2px]"
               title={name}
             >
               <div className="flex h-full w-full flex-col items-center justify-center bg-neutral-900">
@@ -112,17 +112,6 @@ export default function About() {
                   src={src}
                   alt={name}
                   className="mb-2 h-15 w-15 object-contain opacity-90"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                    const label = document.createElement("span");
-                    label.textContent = name[0];
-                    label.className = "mb-2 text-2xl font-bold opacity-70";
-                    e.currentTarget.parentElement?.insertBefore(
-                      label,
-                      e.currentTarget
-                    );
-                  }}
                 />
                 <span className="text-xs font-semibold leading-none tracking-[1px] text-neutral-200">
                   {name}
