@@ -2,6 +2,8 @@ import "./App.css";
 import Hero from "./components/hero";
 import About from "./components/about";
 import Header from "./components/header";
+import Projects from "./components/projects";
+import Footer from "./components/footer";
 
 function App() {
   function handleLearnMore() {
@@ -15,6 +17,8 @@ function App() {
       <section className="body bg-neutral-900">
         {/* <Header /> */}
         <About />
+        <Projects />
+        <Footer />
       </section>
     </>
   );
