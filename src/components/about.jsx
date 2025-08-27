@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Me from "../assets/Me.jpg";
+import Me from "../assets/Me.png";
 import HTML from "../icons/html.svg";
 import CSS from "../icons/css.svg";
 import JavaScript from "../icons/javascript.svg";
@@ -69,7 +69,7 @@ export default function About() {
           <img
             src={Me}
             alt="Me"
-            className="about-image h-52 w-52 object-cover bg-white p-[3px]"
+            className="about-image h-50 w-50 object-cover p-[3px]"
           />
 
           <div className="about-content max-w-prose text-lg leading-relaxed text-neutral-300">
@@ -104,10 +104,10 @@ export default function About() {
             <motion.div
               key={name}
               variants={iconItem}
-              className="relative flex h-36 w-36 flex-col items-center justify-center p-[2px] bg-white"
+              className="relative flex h-36 w-36 flex-col items-center justify-center p-[2px]"
               title={name}
             >
-              <div className="flex h-full w-full flex-col items-center justify-center bg-neutral-900 shadow-[inset_0_0_40px_rgba(236,72,153,0.12)]">
+              <div className="flex h-full w-full flex-col items-center justify-center bg-neutral-900">
                 <img
                   src={src}
                   alt={name}
