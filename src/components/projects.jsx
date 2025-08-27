@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import NewChat from "../assets/NewChat.gif";
-import PLC from "../assets/plc.png";
-import JPM from "../assets/jpm.jpg";
+import PLC from "../assets/PLC.png";
+import JPM from "../assets/JPM.jpg";
 
 const DEFAULT_PROJECTS = [
   {
