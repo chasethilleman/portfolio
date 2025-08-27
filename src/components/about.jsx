@@ -69,11 +69,11 @@ export default function About() {
           <img
             src={Me}
             alt="Me"
-            className="about-image h-52 w-52 rounded-full object-cover bg-gradient-to-tr from-cyan-400 via-fuchsia-400 to-rose-400 p-[3px]"
+            className="about-image h-52 w-52 object-cover bg-white p-[3px]"
           />
 
           <div className="about-content max-w-prose text-lg leading-relaxed text-neutral-300">
-            <p className="mb-4">
+            <p className="mb-4 text-left">
               I’m a Front-End Engineer with a strong design sensibility who
               builds scalable and performant web applications. I ship polished,
               component-based UIs in{" "}
@@ -83,7 +83,7 @@ export default function About() {
               </span>
               , transforming Figma prototypes into production-ready experiences.
             </p>
-            <p>
+            <p className="text-left">
               I’m a technologically adept engineer eager to learn and grow
               within an ever-evolving landscape of modern technologies,
               continuously pushing my skills forward to contribute across the
@@ -104,10 +104,10 @@ export default function About() {
             <motion.div
               key={name}
               variants={iconItem}
-              className="relative flex h-36 w-36 flex-col items-center justify-center rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 via-fuchsia-400 to-rose-400"
+              className="relative flex h-36 w-36 flex-col items-center justify-center p-[2px] bg-white"
               title={name}
             >
-              <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-neutral-900 shadow-[inset_0_0_40px_rgba(236,72,153,0.12)]">
+              <div className="flex h-full w-full flex-col items-center justify-center bg-neutral-900 shadow-[inset_0_0_40px_rgba(236,72,153,0.12)]">
                 <img
                   src={src}
                   alt={name}

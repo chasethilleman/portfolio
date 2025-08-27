@@ -40,7 +40,7 @@ function Project({ title, description, image, cta, reverse, imgWidth }) {
       {/* Image container */}
       <div
         className={clsx(
-          "project-img-container bg-fuchsia-900 transition-transform duration-300 ease-in-out hover:scale-95 cursor-pointer inline-block pt-10 pb-10 mb-8 md:mb-0", // add margin for stacked layout
+          "project-img-container bg-neutral-500 transition-transform duration-300 ease-in-out hover:scale-95 cursor-pointer inline-block pt-10 pb-10 mb-8 md:mb-0", // add margin for stacked layout
           reverse ? "md:pl-30 md:pr-0" : "md:pl-0 md:pr-30",
           imgWidth
         )}

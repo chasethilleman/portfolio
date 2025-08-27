@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import AnimatedBackground from "./animatedBackground";
+import SymbolWater from "./symbolWater";
 
 export default function Hero(props) {
   const [loaded, setLoaded] = useState(false);
@@ -10,7 +11,7 @@ export default function Hero(props) {
 
   return (
     <>
-      <AnimatedBackground />
+      <SymbolWater />
       <section className="hero flex flex-col justify-center items-center space-y-4">
         <h1
           className={[
@@ -30,7 +31,16 @@ export default function Hero(props) {
         >
           I'm a front end engineer.
         </h2>
-        <button
+        <a
+          href="#_"
+          onClick={props.handleLearnMore}
+          class="relative px-6 py-3 font-bold text-white group"
+        >
+          <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-cyan-500 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full border-4 border-white"></span>
+          <span class="relative">Learn More</span>
+        </a>
+        {/* <button
           onClick={props.handleLearnMore}
           className={[
             "group relative inline-flex h-[calc(48px+8px)] items-center justify-center rounded-full",
@@ -62,7 +72,7 @@ export default function Hero(props) {
               </svg>
             </div>
           </div>
-        </button>
+        </button> */}
       </section>
     </>
   );
