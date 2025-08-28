@@ -1,5 +1,6 @@
 import mail from "../icons/mail.png";
 import github from "../icons/github-share.png";
+import linkedin from "../icons/linkedin.png";
 export default function Footer() {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -35,13 +36,20 @@ export default function Footer() {
             />
           </svg>
         </button>
-        <div className="flex pb-3 gap-3">
+        <div className="flex pb-3 gap-3 justify-center">
           <a
             href="https://github.com/chasethilleman"
             target="_blank"
             className="hover:scale-110 ease-in-out duration-300 transition-transform cursor-pointer"
           >
             <img src={github} alt="GitHub" className="w-10 h-10" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/chase-thilleman-33458965/"
+            target="_blank"
+            className="hover:scale-110 ease-in-out duration-300 transition-transform cursor-pointer"
+          >
+            <img src={linkedin} alt="LinkedIn" className="w-10 h-10" />
           </a>
           <a
             href="mailto:chasethilleman@gmail.com"
