@@ -1,5 +1,6 @@
 #root {
   text-align: center;
+  background-color: oklch(20.5% 0 0);
 }
 
 .hero {
