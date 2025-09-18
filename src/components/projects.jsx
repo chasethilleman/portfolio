@@ -11,6 +11,9 @@ const DEFAULT_PROJECTS = [
     image: NewChat,
     reverse: false,
     imgWidth: "max-w-[40rem]",
+    cta: "Learn More",
+    ctaLink:
+      "https://www.loom.com/share/ede8f37d397a4712bd42de1604b4feb0?sid=517ae264-6e0f-4868-bd5d-086e6095e634",
   },
   {
     title: "Salesforce Partner Learning Camp",
@@ -28,7 +31,15 @@ const DEFAULT_PROJECTS = [
   },
 ];
 
-function Project({ title, description, image, cta, reverse, imgWidth }) {
+function Project({
+  title,
+  description,
+  image,
+  cta,
+  reverse,
+  imgWidth,
+  ctaLink,
+}) {
   return (
     <div
       className={clsx(
@@ -62,7 +73,12 @@ function Project({ title, description, image, cta, reverse, imgWidth }) {
         <h3 className="text-3xl md:text-4xl font-bold pb-4 md:pb-6">{title}</h3>
         <p className="text-[1.1rem] md:text-[1.3rem]">{description}</p>
         {cta && (
-          <a href="#" className="cta">
+          <a
+            href={ctaLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta text-cyan-500 text-[1.1rem] md:text-[1.3rem] font-bold"
+          >
             {cta}
           </a>
         )}
