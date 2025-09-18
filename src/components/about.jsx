@@ -91,37 +91,37 @@ export default function About() {
             </p>
             <p className="text-left space-x-4">
               <a
-                class="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group text-cyan-500 transition-all duration-300 ease-in-out"
                 href="https://drive.google.com/file/d/1KFnrviAz--mQ2IbMhjvl6uZa2G4ZoT07/view?usp=sharing"
                 target="_blank"
               >
-                <span class="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                   Resume
                 </span>
               </a>
               <a
-                class="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group text-cyan-500 transition-all duration-300 ease-in-out"
                 href="https://www.linkedin.com/in/chase-thilleman-33458965/"
                 target="_blank"
               >
-                <span class="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                   LinkedIn
                 </span>
               </a>
               <a
-                class="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group text-cyan-500 transition-all duration-300 ease-in-out"
                 href="https://www.github.com/chasethilleman"
                 target="_blank"
               >
-                <span class="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                   GitHub
                 </span>
               </a>
               <a
-                class="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group text-cyan-500 transition-all duration-300 ease-in-out"
                 href="mailto:chasechaisson@me.com"
               >
-                <span class="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                   Mail
                 </span>
               </a>
