@@ -101,20 +101,17 @@ export default function About() {
 
           <div className="about-content max-w-prose text-lg leading-relaxed text-neutral-300">
             <p className="mb-4 text-left">
-              I’m a Full Stack Engineer with a strong design sensibility who
-              builds scalable and performant web applications. I ship polished,
-              component-based UIs in{" "}
-              <span className="text-cyan-500">React</span> and{" "}
-              <span className="text-cyan-500">
-                Salesforce Lightning Web Components
-              </span>
-              , transforming Figma prototypes into production-ready experiences.
+              I'm a{" "}
+              <strong>Full Stack Engineer with a front-end emphasis</strong> and
+              a strong design sensibility, building scalable and performant web
+              applications. I specialize in delivering polished, component-based
+              UIs transforming complex prototypes into production-ready
+              experiences.
             </p>
             <p className="mb-4 text-left">
-              I’m a technologically adept engineer eager to learn and grow
-              within an ever-evolving landscape of modern technologies,
-              continuously pushing my skills forward to contribute across the
-              stack.
+              I'm technologically adept, eager to learn and grow within an
+              ever-evolving landscape of modern technologies, continuously
+              pushing my skills forward to contribute across the stack.
             </p>
             <p className="text-left space-x-4">
               <a
