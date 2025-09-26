@@ -9,6 +9,10 @@ import Git from "../icons/git.svg";
 import Vite from "../icons/vite.svg";
 import Sass from "../icons/sass.svg";
 import Figma from "../icons/figma.svg";
+import PostgreSQL from "../icons/postgresql.svg";
+import Prisma from "../icons/prisma.svg";
+import Redux from "../icons/redux.svg";
+import Tailwind from "../icons/tailwind.svg";
 
 const skills = [
   { name: "HTML", src: HTML },
@@ -20,7 +24,21 @@ const skills = [
   { name: "Vite", src: Vite },
   { name: "Sass", src: Sass },
   { name: "Figma", src: Figma },
+  { name: "PostgreSQL", src: PostgreSQL },
+  { name: "Prisma", src: Prisma },
+  { name: "Redux", src: Redux },
+  { name: "Tailwind", src: Tailwind },
 ];
+
+const skillLayout = [4, 5, 4];
+const skillRows = (() => {
+  let index = 0;
+  return skillLayout.map((count) => {
+    const row = skills.slice(index, index + count);
+    index += count;
+    return row;
+  });
+})();
 
 // Animation variants
 const leftCol = {
@@ -32,9 +50,18 @@ const iconGrid = {
   hidden: {},
   show: {
     transition: {
-      // stagger each child (icon bubble)
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const rowVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      // stagger each icon in the row
       staggerChildren: 0.08,
-      delayChildren: 0.15,
+      delayChildren: 0.12,
     },
   },
 };
@@ -74,7 +101,7 @@ export default function About() {
 
           <div className="about-content max-w-prose text-lg leading-relaxed text-neutral-300">
             <p className="mb-4 text-left">
-              I’m a Front-End Engineer with a strong design sensibility who
+              I’m a Full Stack Engineer with a strong design sensibility who
               builds scalable and performant web applications. I ship polished,
               component-based UIs in{" "}
               <span className="text-cyan-500">React</span> and{" "}
@@ -131,29 +158,40 @@ export default function About() {
 
         {/* RIGHT COLUMN */}
         <motion.div
-          className="grid [grid-template-columns:repeat(auto-fit,minmax(144px,1fr))] gap-6 w-full max-w-[500px]"
+          className="flex w-full max-w-[500px] flex-col items-center gap-15 items-center justify-center"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
           variants={iconGrid}
         >
-          {skills.map(({ name, src }) => (
+          {skillRows.map((row, rowIndex) => (
             <motion.div
-              key={name}
-              variants={iconItem}
-              className="relative w-full aspect-square flex flex-col items-center justify-center p-[2px]"
-              title={name}
+              key={`skills-row-${rowIndex}`}
+              className="grid w-full gap-6"
+              style={{
+                gridTemplateColumns: `repeat(${row.length}, minmax(0, 1fr))`,
+              }}
+              variants={rowVariants}
             >
-              <div className="flex h-full w-full flex-col items-center justify-center bg-neutral-900">
-                <img
-                  src={src}
-                  alt={name}
-                  className="mb-2 h-15 w-15 object-contain opacity-90"
-                />
-                <span className="text-xs font-semibold leading-none tracking-[1px] text-neutral-200">
-                  {name}
-                </span>
-              </div>
+              {row.map(({ name, src }) => (
+                <motion.div
+                  key={name}
+                  variants={iconItem}
+                  className="relative w-full aspect-square flex flex-col items-center justify-center p-[2px]"
+                  title={name}
+                >
+                  <div className="flex h-full w-full flex-col items-center justify-center bg-neutral-900">
+                    <img
+                      src={src}
+                      alt={name}
+                      className="mb-2 h-15 w-15 object-contain opacity-90"
+                    />
+                    <span className="text-xs font-semibold leading-none tracking-[1px] text-neutral-200">
+                      {name}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
             </motion.div>
           ))}
         </motion.div>
