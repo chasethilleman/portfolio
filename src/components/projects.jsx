@@ -61,7 +61,7 @@ function Project({
       {/* Image container */}
       <div
         className={clsx(
-          "project-img-container transition-transform duration-300 ease-in-out hover:scale-95 inline-block pt-10 pb-10 mb-8 md:mb-0", // add margin for stacked layout
+          "project-img-container inline-block pt-10 pb-10 mb-8 md:mb-0", // add margin for stacked layout
           reverse ? "md:pl-30 md:pr-0" : "md:pl-0 md:pr-30",
           imgWidth
         )}
@@ -84,7 +84,7 @@ function Project({
         <p className="text-[1.1rem] md:text-[1.3rem]">{description}</p>
         {cta && (
           <a
-            className="pt-4 group text-cyan-500 transition-all duration-300 ease-in-out max-w-prose text-lg leading-relaxed"
+            className="mt-4 group text-cyan-500 transition-all duration-300 ease-in-out max-w-prose text-lg leading-relaxed"
             href={ctaLink}
             target="_blank"
           >
