@@ -21,7 +21,7 @@ const DEFAULT_PROJECTS = [
     description: "An easy way to track your job applications. Built with Next.js, TypeScript, Prisma, and PostgreSQL.",
     image: Jobsy,
     reverse: true,
-    imgWidth: "max-w-[40rem]",
+    imgWidth: "max-w-[70rem]",
     cta: "View Demo",
     ctaLink: "https://application-tracker-next.vercel.app",
   },
@@ -84,7 +84,7 @@ function Project({
         <p className="text-[1.1rem] md:text-[1.3rem]">{description}</p>
         {cta && (
           <a
-            className="group text-cyan-500 transition-all duration-300 ease-in-out max-w-prose text-lg leading-relaxed"
+            className="pt-4 group text-cyan-500 transition-all duration-300 ease-in-out max-w-prose text-lg leading-relaxed"
             href={ctaLink}
             target="_blank"
           >
