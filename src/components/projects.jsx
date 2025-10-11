@@ -2,6 +2,7 @@ import clsx from "clsx";
 import NewChat from "../assets/NewChat.gif";
 import PLC from "../assets/PLC.png";
 import JPM from "../assets/JPM.jpg";
+import Jobsy from "../assets/Jobsy.gif";
 
 const DEFAULT_PROJECTS = [
   {
@@ -16,17 +17,26 @@ const DEFAULT_PROJECTS = [
       "https://www.loom.com/share/ede8f37d397a4712bd42de1604b4feb0?sid=517ae264-6e0f-4868-bd5d-086e6095e634",
   },
   {
+    title: "Jobsy - Job Application Tracker",
+    description: "An easy way to track your job applications. Built with Next.js, TypeScript, Prisma, and PostgreSQL.",
+    image: Jobsy,
+    reverse: true,
+    imgWidth: "max-w-[40rem]",
+    cta: "View Demo",
+    ctaLink: "https://application-tracker-next.vercel.app",
+  },
+  {
     title: "Salesforce Partner Learning Camp",
     description: "A comprehensive learning platform for Salesforce partners.",
     image: PLC,
-    reverse: true,
+    reverse: false,
     imgWidth: "max-w-[70rem]",
   },
   {
     title: "J.P. Morgan Payments Partner Portal",
     description: "A platform built for managing partner accounts and listings.",
     image: JPM,
-    reverse: false,
+    reverse: true,
     imgWidth: "max-w-[70rem]",
   },
 ];
