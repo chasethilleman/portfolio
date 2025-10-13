@@ -102,11 +102,7 @@ export default function About() {
           <div className="about-content max-w-prose text-lg leading-relaxed text-neutral-300">
             <p className="mb-4 text-left">
               I'm a{" "}
-              <strong>Full Stack Engineer with a front-end emphasis</strong> and
-              a strong design sensibility, building scalable and performant web
-              applications. I specialize in delivering polished, component-based
-              UIs transforming complex prototypes into production-ready
-              experiences.
+              <strong>Full Stack Engineer with a front-end emphasis</strong> and a strong foundation in UI/UX design, building scalable and performant web applications. I combine design thinking with engineering precision to deliver intuitive, component-based interfaces that transform complex prototypes into seamless, production-ready experiences.
             </p>
             <p className="mb-4 text-left">
               I'm technologically adept, eager to learn and grow within an
