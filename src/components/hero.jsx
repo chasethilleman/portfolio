@@ -29,7 +29,7 @@ export default function Hero(props) {
               : "opacity-0 -translate-x-full",
           ].join(" ")}
         >
-          I'm a full stack engineer.
+          I'm a design engineer.
         </h2>
         <a
           href="#_"
