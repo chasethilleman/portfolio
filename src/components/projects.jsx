@@ -18,7 +18,7 @@ const DEFAULT_PROJECTS = [
   },
   {
     title: "Jobsy - Job Application Tracker",
-    description: "An easy way to track your job applications. Built with Next.js, TypeScript, Prisma, and PostgreSQL.",
+    description: "An easy way to track your job applications. Built with React, Next.js, TypeScript, Prisma, and PostgreSQL.",
     image: Jobsy,
     reverse: true,
     imgWidth: "max-w-[70rem]",
