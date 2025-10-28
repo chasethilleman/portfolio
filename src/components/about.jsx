@@ -111,38 +111,38 @@ export default function About() {
             </p>
             <p className="text-left space-x-4">
               <a
-                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500"
                 href="https://drive.google.com/file/d/1KFnrviAz--mQ2IbMhjvl6uZa2G4ZoT07/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>Resume</span>
-                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                <ExternalLink className="h-4 w-4 shrink-0" />
               </a>
               <a
-                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500"
                 href="https://www.linkedin.com/in/chase-thilleman-33458965/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>LinkedIn</span>
-                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                <ExternalLink className="h-4 w-4 shrink-0" />
               </a>
               <a
-                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500"
                 href="https://www.github.com/chasethilleman"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span>GitHub</span>
-                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                <ExternalLink className="h-4 w-4 shrink-0" />
               </a>
               <a
-                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
+                className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500"
                 href="mailto:chasechaisson@me.com"
               >
                 <span>Mail</span>
-                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
+                <ExternalLink className="h-4 w-4 shrink-0" />
               </a>
             </p>
           </div>

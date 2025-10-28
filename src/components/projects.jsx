@@ -25,6 +25,8 @@ const DEFAULT_PROJECTS = [
     imgWidth: "max-w-[70rem]",
     cta: "View Demo",
     ctaLink: "https://application-tracker-next.vercel.app",
+    secondaryCta: "View Repo",
+    secondaryCtaLink: "https://github.com/chasethilleman/application-tracker-next",
   },
   {
     title: "Salesforce Partner Learning Camp",
@@ -50,6 +52,8 @@ function Project({
   reverse,
   imgWidth,
   ctaLink,
+  secondaryCta,
+  secondaryCtaLink,
 }) {
   return (
     <div
@@ -83,16 +87,31 @@ function Project({
       >
         <h3 className="text-3xl md:text-4xl font-bold pb-4 md:pb-6">{title}</h3>
         <p className="text-[1.1rem] md:text-[1.3rem]">{description}</p>
-        {cta && (
-          <a
-            className="group mt-4 inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-lg text-cyan-500 transition-all duration-300 ease-in-out"
-            href={ctaLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span>{cta}</span>
-            <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
-          </a>
+        {(cta || secondaryCta) && (
+          <div className="mt-4 flex flex-wrap items-center gap-3">
+            {cta && (
+              <a
+                className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-lg text-cyan-500"
+                href={ctaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{cta}</span>
+                <ExternalLink className="h-4 w-4 shrink-0" />
+              </a>
+            )}
+            {secondaryCta && (
+              <a
+                className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-lg text-cyan-500"
+                href={secondaryCtaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{secondaryCta}</span>
+                <ExternalLink className="h-4 w-4 shrink-0" />
+              </a>
+            )}
+          </div>
         )}
       </div>
     </div>
