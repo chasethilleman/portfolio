@@ -109,7 +109,7 @@ export default function About() {
               ever-evolving landscape of modern technologies, continuously
               pushing my skills forward to contribute across the stack.
             </p>
-            <p className="text-left space-x-4">
+            <p className="flex flex-wrap items-center gap-3 text-left">
               <a
                 className="inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500"
                 href="https://drive.google.com/file/d/1KFnrviAz--mQ2IbMhjvl6uZa2G4ZoT07/view?usp=sharing"
