@@ -90,9 +90,7 @@ function Project({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-              {cta}
-            </span>
+            <span>{cta}</span>
             <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
           </a>
         )}
