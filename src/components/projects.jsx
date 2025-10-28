@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { ExternalLink } from "lucide-react";
 import NewChat from "../assets/NewChat.gif";
 import PLC from "../assets/PLC.png";
 import JPM from "../assets/JPM.jpg";
@@ -84,13 +85,15 @@ function Project({
         <p className="text-[1.1rem] md:text-[1.3rem]">{description}</p>
         {cta && (
           <a
-            className="mt-4 group text-cyan-500 transition-all duration-300 ease-in-out max-w-prose text-lg leading-relaxed"
+            className="group mt-4 inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-lg text-cyan-500 transition-all duration-300 ease-in-out"
             href={ctaLink}
             target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               {cta}
             </span>
+            <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
           </a>
         )}
       </div>

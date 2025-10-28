@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import Me from "../assets/Me.png";
 import HTML from "../icons/html.svg";
 import CSS from "../icons/css.svg";
@@ -110,39 +111,46 @@ export default function About() {
             </p>
             <p className="text-left space-x-4">
               <a
-                className="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
                 href="https://drive.google.com/file/d/1KFnrviAz--mQ2IbMhjvl6uZa2G4ZoT07/view?usp=sharing"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                   Resume
                 </span>
+                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </a>
               <a
-                className="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
                 href="https://www.linkedin.com/in/chase-thilleman-33458965/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                   LinkedIn
                 </span>
+                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </a>
               <a
-                className="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
                 href="https://www.github.com/chasethilleman"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                   GitHub
                 </span>
+                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </a>
               <a
-                className="group text-cyan-500 transition-all duration-300 ease-in-out"
+                className="group inline-flex items-center gap-2 border border-cyan-500 px-3 py-1 text-cyan-500 transition-all duration-300 ease-in-out"
                 href="mailto:chasechaisson@me.com"
               >
-                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <span className="bg-left-bottom bg-gradient-to-r from-cyan-500 to-cyan-500 bg-[length:0%_2px] bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]">
                   Mail
                 </span>
+                <ExternalLink className="h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </a>
             </p>
           </div>
